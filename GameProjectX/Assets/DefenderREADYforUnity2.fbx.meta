@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: a0972e9ce4c3d654e8b25bc68c01119c
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Cube
+    100004: Cube_MeshPart0
+    100006: Cube_MeshPart1
+    100008: //RootNode
+    100010: HydraulicsLeft
+    100012: HydraulicsLeft_end
+    100014: HydraulicsRight
+    100016: HydraulicsRight_end
+    100018: LeftRotatingLeg
+    100020: LeftRotatingLeg_end
+    100022: LowerLeftRotatingLeg
+    100024: LowerLeftRotatingLeg_end
+    100026: LowerRightRotatingLeg
+    100028: LowerRightRotatingLeg_end
+    100030: MasterBone
+    100032: MasterBone_end
+    100034: RightRotatingLeg
+    100036: RightRotatingLeg_end
+    100038: WholeLowerLeftLeg
+    100040: WholeLowerLeftLeg_end
+    100042: WholeLowerRightLeg
+    100044: WholeLowerRightLeg_end
+    400000: Armature
+    400002: Cube
+    400004: Cube_MeshPart0
+    400006: Cube_MeshPart1
+    400008: //RootNode
+    400010: HydraulicsLeft
+    400012: HydraulicsLeft_end
+    400014: HydraulicsRight
+    400016: HydraulicsRight_end
+    400018: LeftRotatingLeg
+    400020: LeftRotatingLeg_end
+    400022: LowerLeftRotatingLeg
+    400024: LowerLeftRotatingLeg_end
+    400026: LowerRightRotatingLeg
+    400028: LowerRightRotatingLeg_end
+    400030: MasterBone
+    400032: MasterBone_end
+    400034: RightRotatingLeg
+    400036: RightRotatingLeg_end
+    400038: WholeLowerLeftLeg
+    400040: WholeLowerLeftLeg_end
+    400042: WholeLowerRightLeg
+    400044: WholeLowerRightLeg_end
+    4300000: Cube_MeshPart0
+    4300002: Cube_MeshPart1
+    7400000: Walking
+    7400002: RightForward
+    7400004: LeftForward
+    7400006: Idle
+    9500000: //RootNode
+    13700000: Cube_MeshPart0
+    13700002: Cube_MeshPart1
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 9a08fba38a5085a449c708d9eab65d13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.000
+    second: {fileID: 2100000, guid: b23dadadc16ec144e8fcf73cbe40eb90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: ef2b03543172dce4ab5397dbf28d2ef4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: c387d4b1470c2cd44b59b9129fed60cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.012
+    second: {fileID: 2100000, guid: 7fa9a3bdfd0922d44bc925fc7df1ef74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.013
+    second: {fileID: 2100000, guid: 9a02f8c2155e6ea40adea4bd81468286, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cannons.000
+    second: {fileID: 2100000, guid: 98a8d1fc16668944ea4af15a499bafcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fire hose.001
+    second: {fileID: 2100000, guid: 5b96254006b79154ab006b127bfd8d79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: missile.001
+    second: {fileID: 2100000, guid: 6afb648b822105d4aa3b29b51a945c17, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: Armature|ArmatureAction.001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HydraulicsLeft
+        weight: 1
+      - path: Armature/HydraulicsLeft/HydraulicsLeft_end
+        weight: 1
+      - path: Armature/HydraulicsRight
+        weight: 1
+      - path: Armature/HydraulicsRight/HydraulicsRight_end
+        weight: 1
+      - path: Armature/LeftRotatingLeg
+        weight: 1
+      - path: Armature/LeftRotatingLeg/LeftRotatingLeg_end
+        weight: 1
+      - path: Armature/LowerLeftRotatingLeg
+        weight: 1
+      - path: Armature/LowerLeftRotatingLeg/LowerLeftRotatingLeg_end
+        weight: 1
+      - path: Armature/LowerRightRotatingLeg
+        weight: 1
+      - path: Armature/LowerRightRotatingLeg/LowerRightRotatingLeg_end
+        weight: 1
+      - path: Armature/MasterBone
+        weight: 1
+      - path: Armature/MasterBone/MasterBone_end
+        weight: 1
+      - path: Armature/RightRotatingLeg
+        weight: 1
+      - path: Armature/RightRotatingLeg/RightRotatingLeg_end
+        weight: 1
+      - path: Armature/WholeLowerLeftLeg
+        weight: 1
+      - path: Armature/WholeLowerLeftLeg/WholeLowerLeftLeg_end
+        weight: 1
+      - path: Armature/WholeLowerRightLeg
+        weight: 1
+      - path: Armature/WholeLowerRightLeg/WholeLowerRightLeg_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube/Cube_MeshPart0
+        weight: 1
+      - path: Cube/Cube_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RightForward
+      takeName: Armature|ArmatureAction.001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HydraulicsLeft
+        weight: 1
+      - path: Armature/HydraulicsLeft/HydraulicsLeft_end
+        weight: 1
+      - path: Armature/HydraulicsRight
+        weight: 1
+      - path: Armature/HydraulicsRight/HydraulicsRight_end
+        weight: 1
+      - path: Armature/LeftRotatingLeg
+        weight: 1
+      - path: Armature/LeftRotatingLeg/LeftRotatingLeg_end
+        weight: 1
+      - path: Armature/LowerLeftRotatingLeg
+        weight: 1
+      - path: Armature/LowerLeftRotatingLeg/LowerLeftRotatingLeg_end
+        weight: 1
+      - path: Armature/LowerRightRotatingLeg
+        weight: 1
+      - path: Armature/LowerRightRotatingLeg/LowerRightRotatingLeg_end
+        weight: 1
+      - path: Armature/MasterBone
+        weight: 1
+      - path: Armature/MasterBone/MasterBone_end
+        weight: 1
+      - path: Armature/RightRotatingLeg
+        weight: 1
+      - path: Armature/RightRotatingLeg/RightRotatingLeg_end
+        weight: 1
+      - path: Armature/WholeLowerLeftLeg
+        weight: 1
+      - path: Armature/WholeLowerLeftLeg/WholeLowerLeftLeg_end
+        weight: 1
+      - path: Armature/WholeLowerRightLeg
+        weight: 1
+      - path: Armature/WholeLowerRightLeg/WholeLowerRightLeg_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube/Cube_MeshPart0
+        weight: 1
+      - path: Cube/Cube_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LeftForward
+      takeName: Armature|ArmatureAction.001
+      firstFrame: 30
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HydraulicsLeft
+        weight: 1
+      - path: Armature/HydraulicsLeft/HydraulicsLeft_end
+        weight: 1
+      - path: Armature/HydraulicsRight
+        weight: 1
+      - path: Armature/HydraulicsRight/HydraulicsRight_end
+        weight: 1
+      - path: Armature/LeftRotatingLeg
+        weight: 1
+      - path: Armature/LeftRotatingLeg/LeftRotatingLeg_end
+        weight: 1
+      - path: Armature/LowerLeftRotatingLeg
+        weight: 1
+      - path: Armature/LowerLeftRotatingLeg/LowerLeftRotatingLeg_end
+        weight: 1
+      - path: Armature/LowerRightRotatingLeg
+        weight: 1
+      - path: Armature/LowerRightRotatingLeg/LowerRightRotatingLeg_end
+        weight: 1
+      - path: Armature/MasterBone
+        weight: 1
+      - path: Armature/MasterBone/MasterBone_end
+        weight: 1
+      - path: Armature/RightRotatingLeg
+        weight: 1
+      - path: Armature/RightRotatingLeg/RightRotatingLeg_end
+        weight: 1
+      - path: Armature/WholeLowerLeftLeg
+        weight: 1
+      - path: Armature/WholeLowerLeftLeg/WholeLowerLeftLeg_end
+        weight: 1
+      - path: Armature/WholeLowerRightLeg
+        weight: 1
+      - path: Armature/WholeLowerRightLeg/WholeLowerRightLeg_end
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube/Cube_MeshPart0
+        weight: 1
+      - path: Cube/Cube_MeshPart1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
