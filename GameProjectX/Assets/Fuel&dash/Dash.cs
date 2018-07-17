@@ -63,46 +63,120 @@ public class Dash : MonoBehaviour
 
 	}
     
+    //BUG THAT NEEDS TO BE FIXED: WHEN USING VERTICAL IT USES FUEL TWICE AS FAST THEREFORE A DIAGONAL MECHANISM MUST BE IMPLEMENTED
+
+
+
+
 
     // Update is called once per frame
     void Update ()
 	{
-		
-
-        if (Input.GetKey(pressShift) && Input.GetKey(pressDown))
-        {
-            //Make it dashforward backwards
-            transform.Translate(Vector3.forward * 60 * Time.deltaTime);
-
-        }
-
-        if (Input.GetKey(pressShift) && Input.GetKey(pressUp))
-        {
-            //Make it dashforward forward
-
-            transform.Translate(Vector3.back * 60 * Time.deltaTime);
-        }
-
-        if (Input.GetKey(pressShift) && Input.GetKey(pressLeft) && Fuel > 0)
-		{
-			fueltext = Fuel;
-            refuelcooldown = false;
-            Fuel -= Time.deltaTime;
-            transform.Translate(Vector3.right * 60 * Time.deltaTime);
-
-			if (stopcou == true) 
-			{
-				stopcou = false;
-				stopRefuel ();
-				resethandleit = true;
-
-			}
-            if (stopcou == false)
+            if (Input.GetKey(pressShift) && Input.GetKey(pressDown))
             {
-                resethandleit = true;
+                //Make it dashforward backwards
+                fueltext = Fuel;
+                refuelcooldown = false;
+
+                if (Fuel > 0)
+                {
+                    Fuel -= Time.deltaTime;
+                    transform.Translate(Vector3.forward * 60 * Time.deltaTime);
+                }
+
+                if (stopcou == true)
+                {
+                    stopcou = false;
+                    stopRefuel();
+                    resethandleit = true;
+
+                }
+                if (stopcou == false)
+                {
+                    resethandleit = true;
+                }
+
             }
 
-        }
+            if (Input.GetKey(pressShift) && Input.GetKey(pressUp))
+            {
+                //Make it dashforward forward
+                fueltext = Fuel;
+                refuelcooldown = false;
+
+                if (Fuel > 0)
+                {
+                    Fuel -= Time.deltaTime;
+                    transform.Translate(Vector3.back * 60 * Time.deltaTime);
+                }
+
+                if (stopcou == true)
+                {
+                    stopcou = false;
+                    stopRefuel();
+                    resethandleit = true;
+
+                }
+                if (stopcou == false)
+                {
+                    resethandleit = true;
+                }
+            }
+
+            //Dash Left
+            if (Input.GetKey(pressShift) && Input.GetKey(pressLeft))
+            {
+                fueltext = Fuel;
+                refuelcooldown = false;
+
+                if (Fuel > 0)
+                {
+                    Fuel -= Time.deltaTime;
+                    transform.Translate(Vector3.right * 60 * Time.deltaTime);
+                }
+
+                if (stopcou == true)
+                {
+                    stopcou = false;
+                    stopRefuel();
+                    resethandleit = true;
+
+                }
+                if (stopcou == false)
+                {
+                    resethandleit = true;
+                }
+
+            }
+            //Dash right 
+            if (Input.GetKey(pressShift) && Input.GetKey(pressRight))
+            {
+                fueltext = Fuel;
+                refuelcooldown = false;
+
+                if (Fuel > 0)
+                {
+                    Fuel -= Time.deltaTime;
+                    transform.Translate(Vector3.left * 60 * Time.deltaTime);
+                }
+                
+                if (stopcou == true)
+                {
+                    stopcou = false;
+                    stopRefuel();
+                    resethandleit = true;
+
+                }
+                if (stopcou == false)
+                {
+                    resethandleit = true;
+                }
+
+            }
+        
+
+        ////////////////////////////////////////////////////////
+        //FUEL AND REFUEL MECHANISM
          if (Fuel < MaxFuel && !Input.GetKey(pressShift))//Refuel
         {     
 			if (resethandleit == true) 
@@ -116,6 +190,7 @@ public class Dash : MonoBehaviour
 			}
             if (refuelcooldown == true)
             {
+                //print("REFUELING.....");
                 Fuel += Time.deltaTime;
 				fueltext = Fuel;
             }
@@ -125,13 +200,7 @@ public class Dash : MonoBehaviour
 		{
 			resethandleit = true;
 		}
-
-        if (Input.GetKey(pressShift) && Input.GetKey(pressRight))
-        {
-            //Dash Right
-            transform.Translate(Vector3.left * 60 * Time.deltaTime);
-
-        }  
+        
     }
 
 
