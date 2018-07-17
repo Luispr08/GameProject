@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(pressUp))//****IMPORTANT****Inside the GetKey() you can use "KeyCode.letter" like this GetKey(KeyCode.W) in order to define what key on the keyboard to use.
         {
-            transform.position += -transform.forward * 30 * Time.deltaTime;
+            transform.position -= transform.forward * 30 * Time.deltaTime;
             //Later on I need to divide the animation in different segmenets and execute them depending on how long the player holds the up key.
             //walk.Play("Walking");
         }
@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(pressRight))
         {   
               //Moves character Right at certain speed.
-            transform.position += -transform.right * 30 * Time.deltaTime;
+            transform.position -= transform.right * 30 * Time.deltaTime;
         }
      
     }

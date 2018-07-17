@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Dash : MonoBehaviour
 {
-    public KeyCode pressUp;
     public KeyCode pressDown;
-    public KeyCode pressLeft;
+    public KeyCode pressUp;
     public KeyCode pressRight;
+    public KeyCode pressLeft;
     public KeyCode pressShift;
 
     float Fuel = 0.5f;
@@ -30,7 +30,7 @@ public class Dash : MonoBehaviour
 		refuelcooldown = false;
 		print (Time.time);
         print("entered the couritine");
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(1);
 		print (Time.time);
 
 		if (stopcou == true) 
@@ -62,17 +62,118 @@ public class Dash : MonoBehaviour
 		FuelCoolDown = HandleIt ();
 
 	}
-    
-    //BUG THAT NEEDS TO BE FIXED: WHEN USING VERTICAL IT USES FUEL TWICE AS FAST THEREFORE A DIAGONAL MECHANISM MUST BE IMPLEMENTED
-
-
+   
 
 
 
     // Update is called once per frame
     void Update ()
 	{
-            if (Input.GetKey(pressShift) && Input.GetKey(pressDown))
+        //////DIAGONAL DASHESH
+
+        if (Input.GetKey(pressShift) && Input.GetKey(pressDown) && Input.GetKey(pressRight))
+        {
+            fueltext = Fuel;
+            refuelcooldown = false;
+
+            if (Fuel > 0)
+            {
+                Fuel -= Time.deltaTime;
+                transform.Translate(Vector3.back * -30 * Time.deltaTime);
+                transform.Translate(Vector3.right * -30 * Time.deltaTime);
+
+            }
+
+            if (stopcou == true)
+            {
+                stopcou = false;
+                stopRefuel();
+                resethandleit = true;
+
+            }
+            if (stopcou == false)
+            {
+                resethandleit = true;
+            }
+        }
+        else if (Input.GetKey(pressShift) && Input.GetKey(pressDown) && Input.GetKey(pressLeft))
+        {
+            fueltext = Fuel;
+            refuelcooldown = false;
+
+            if (Fuel > 0)
+            {
+                Fuel -= Time.deltaTime;
+                transform.Translate(Vector3.back * -30 * Time.deltaTime);
+                transform.Translate(Vector3.left * -30 * Time.deltaTime);
+            }
+
+            if (stopcou == true)
+            {
+                stopcou = false;
+                stopRefuel();
+                resethandleit = true;
+
+            }
+            if (stopcou == false)
+            {
+                resethandleit = true;
+            }
+        }
+        else if (Input.GetKey(pressShift) && Input.GetKey(pressUp) && Input.GetKey(pressRight))
+        {
+            fueltext = Fuel;
+            refuelcooldown = false;
+
+            if (Fuel > 0)
+            {
+                Fuel -= Time.deltaTime;
+                transform.Translate(Vector3.forward * -30 * Time.deltaTime);
+                transform.Translate(Vector3.right * -30 * Time.deltaTime);
+            }
+
+            if (stopcou == true)
+            {
+                stopcou = false;
+                stopRefuel();
+                resethandleit = true;
+
+            }
+            if (stopcou == false)
+            {
+                resethandleit = true;
+            }
+        }
+        else if (Input.GetKey(pressShift) && Input.GetKey(pressUp) && Input.GetKey(pressLeft))
+        {
+            fueltext = Fuel;
+            refuelcooldown = false;
+
+            if (Fuel > 0)
+            {
+                Fuel -= Time.deltaTime;
+                transform.Translate(Vector3.forward * -30 * Time.deltaTime);
+                transform.Translate(Vector3.left * -30 * Time.deltaTime);
+            }
+
+            if (stopcou == true)
+            {
+                stopcou = false;
+                stopRefuel();
+                resethandleit = true;
+
+            }
+            if (stopcou == false)
+            {
+                resethandleit = true;
+            }
+        }
+
+
+        //////ONE DIRECTION DASH
+        else
+        {
+            if (Input.GetKey(pressShift) && Input.GetKey(pressUp))
             {
                 //Make it dashforward backwards
                 fueltext = Fuel;
@@ -81,7 +182,7 @@ public class Dash : MonoBehaviour
                 if (Fuel > 0)
                 {
                     Fuel -= Time.deltaTime;
-                    transform.Translate(Vector3.forward * 60 * Time.deltaTime);
+                    transform.Translate(Vector3.forward * -60 * Time.deltaTime);
                 }
 
                 if (stopcou == true)
@@ -98,7 +199,7 @@ public class Dash : MonoBehaviour
 
             }
 
-            if (Input.GetKey(pressShift) && Input.GetKey(pressUp))
+            if (Input.GetKey(pressShift) && Input.GetKey(pressDown))
             {
                 //Make it dashforward forward
                 fueltext = Fuel;
@@ -107,7 +208,7 @@ public class Dash : MonoBehaviour
                 if (Fuel > 0)
                 {
                     Fuel -= Time.deltaTime;
-                    transform.Translate(Vector3.back * 60 * Time.deltaTime);
+                    transform.Translate(Vector3.back * -60 * Time.deltaTime);
                 }
 
                 if (stopcou == true)
@@ -124,7 +225,7 @@ public class Dash : MonoBehaviour
             }
 
             //Dash Left
-            if (Input.GetKey(pressShift) && Input.GetKey(pressLeft))
+            if (Input.GetKey(pressShift) && Input.GetKey(pressRight))
             {
                 fueltext = Fuel;
                 refuelcooldown = false;
@@ -132,7 +233,7 @@ public class Dash : MonoBehaviour
                 if (Fuel > 0)
                 {
                     Fuel -= Time.deltaTime;
-                    transform.Translate(Vector3.right * 60 * Time.deltaTime);
+                    transform.Translate(Vector3.right * -60 * Time.deltaTime);
                 }
 
                 if (stopcou == true)
@@ -149,7 +250,7 @@ public class Dash : MonoBehaviour
 
             }
             //Dash right 
-            if (Input.GetKey(pressShift) && Input.GetKey(pressRight))
+            if (Input.GetKey(pressShift) && Input.GetKey(pressLeft))
             {
                 fueltext = Fuel;
                 refuelcooldown = false;
@@ -157,9 +258,9 @@ public class Dash : MonoBehaviour
                 if (Fuel > 0)
                 {
                     Fuel -= Time.deltaTime;
-                    transform.Translate(Vector3.left * 60 * Time.deltaTime);
+                    transform.Translate(Vector3.left * -60 * Time.deltaTime);
                 }
-                
+
                 if (stopcou == true)
                 {
                     stopcou = false;
@@ -173,6 +274,7 @@ public class Dash : MonoBehaviour
                 }
 
             }
+        }
         
 
         ////////////////////////////////////////////////////////
