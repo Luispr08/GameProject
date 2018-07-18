@@ -290,10 +290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95c3f38049471b428cbffda3b263367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressUp: 119
   pressDown: 115
-  pressLeft: 97
+  pressUp: 119
   pressRight: 100
+  pressLeft: 97
   pressShift: 304
   fueltext: 0.5
 --- !u!1 &371970184
